@@ -546,7 +546,7 @@ with tab1:
 with tab2:
     st.subheader("🔗 Device Monitoring & Control")
 
-    SERVER_URL = "http://localhost:5001"
+    SERVER_URL = os.getenv("DEVICE_SERVER_URL", "http://localhost:5001")
 
     try:
         response = requests.get(f"{SERVER_URL}/health", timeout=2)
