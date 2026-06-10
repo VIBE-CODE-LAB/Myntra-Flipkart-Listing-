@@ -46,10 +46,26 @@ class GoogleSheetsReader:
     def _authenticate(self):
         """Authenticate with Google Sheets API"""
         try:
+            # 1. Try authenticating via environment variable containing raw JSON content
+            creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+            if creds_json:
+                try:
+                    info = json.loads(creds_json)
+                    creds = Credentials.from_service_account_info(
+                        info,
+                        scopes=self.SCOPES
+                    )
+                    self.client = gspread.authorize(creds)
+                    logger.info("[OK] Google Sheets authentication successful (via env JSON)")
+                    return
+                except Exception as env_err:
+                    logger.warning(f"Failed to authenticate using GOOGLE_APPLICATION_CREDENTIALS_JSON env: {env_err}")
+
+            # 2. Fall back to credentials file path
             if not self.credentials_path.exists():
                 raise FileNotFoundError(
                     f"Google credentials not found at {self.credentials_path}\n"
-                    f"Run 'python setup_google_auth.py' to set up authentication"
+                    f"Either set the GOOGLE_APPLICATION_CREDENTIALS_JSON environment variable, or place the credentials file at {self.credentials_path}"
                 )
             
             creds = Credentials.from_service_account_file(
@@ -57,7 +73,7 @@ class GoogleSheetsReader:
                 scopes=self.SCOPES
             )
             self.client = gspread.authorize(creds)
-            logger.info("[OK] Google Sheets authentication successful")
+            logger.info("[OK] Google Sheets authentication successful (via file)")
             
         except Exception as e:
             logger.error(f"[ERROR] Google Sheets authentication failed: {e}")
