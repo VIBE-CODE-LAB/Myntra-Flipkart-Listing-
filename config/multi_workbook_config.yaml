@@ -1,0 +1,405 @@
+# Multi-Workbook Configuration - COMBINED (Myntra + Flipkart)
+# Myntra brands use keys: komli, invisisoft, tweens, dressberry, joomie, souminie, invisifit, intimist
+# Flipkart brands use keys: fk_komli, fk_invisisoft, fk_tweens, fk_dressberry, fk_joomie, fk_souminie, fk_invisifit, fk_intimist
+
+# ============================================================================
+# WORKBOOK IDs - Google Drive Spreadsheet IDs
+# ============================================================================
+workbooks:
+  myntra_tracker:
+    id: ""
+    description: "Myntra Tracker (brand-specific sheets)"
+    source_type: "sku"
+
+  flipkart_tracker:
+    id: ""
+    description: "Flipkart Tracker (Ankita) - brand-specific sheets"
+    source_type: "sku"
+
+  belle_komli:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Komli)"
+    source_type: "attributes"
+
+  belle_invisisoft:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Invisi-Soft)"
+    source_type: "attributes"
+
+  belle_tweens:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Tweens)"
+    source_type: "attributes"
+
+  belle_joomie:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Joomie)"
+    source_type: "attributes"
+
+  belle_souminie:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Souminie)"
+    source_type: "attributes"
+
+  belle_dressberry:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Dressberry)"
+    source_type: "attributes"
+
+  belle_invisi_fit:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Invisi-Fit)"
+    source_type: "attributes"
+
+  belle_intimist:
+    id: ""
+    description: "E-Com Listing Master-2026 (Belle-Intimist)"
+    source_type: "attributes"
+
+# ============================================================================
+# BRANDS - MYNTRA (keys: komli, invisisoft, tweens, dressberry, joomie, souminie, invisifit)
+# ============================================================================
+brands:
+  komli:
+    display_name: "Komli"
+    prefix: "KB"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Komli>Myntra (AMC Corp)"
+      article_id_column: "Komli"
+    attribute_source:
+      workbook: "belle_komli"
+      sheet_name: "Komli::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/komli/"
+
+  invisisoft:
+    display_name: "Invisisoft"
+    prefix: "IS"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Invisi-Soft>Myntra (Invisi-Soft Corp)"
+      article_id_column: "Invisi-Soft"
+    attribute_source:
+      workbook: "belle_invisisoft"
+      sheet_name: "Invisi-Soft::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/invisisoft/"
+
+  tweens:
+    display_name: "Tweens"
+    prefix: "TW"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Tweens>Myntra (Belle Lingeries)"
+      article_id_column: "Tweens"
+    attribute_source:
+      workbook: "belle_tweens"
+      sheet_name: "Tweens::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/tweens/"
+
+  dressberry:
+    display_name: "Dressberry"
+    prefix: "DB"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Dressberry>Myntra (Belle Lingeries)"
+      article_id_column: "Dressberry"
+    attribute_source:
+      workbook: "belle_dressberry"
+      sheet_name: "Dressberry::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/dressberry/"
+
+  joomie:
+    display_name: "Joomie"
+    prefix: "J"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Joomie>Myntra (Joomie Corp)"
+      article_id_column: "Joomie"
+    attribute_source:
+      workbook: "belle_joomie"
+      sheet_name: "Joomie::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/joomie/"
+
+  souminie:
+    display_name: "Souminie"
+    prefix: "S"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Souminie>Myntra (Souminie Corp)"
+      article_id_column: "Souminie"
+    attribute_source:
+      workbook: "belle_souminie"
+      sheet_name: "Souminie::Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/souminie/"
+
+  invisifit:
+    display_name: "Invisi-Fit"
+    prefix: "IF"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Invisi-Fit>Myntra (Joomie Corp)"
+      article_id_column: "Invisi-fit"
+    attribute_source:
+      workbook: "belle_invisi_fit"
+      sheet_name: "Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/invisifit/"
+
+  intimist:
+    display_name: "Intimist"
+    prefix: "IT"
+    sku_source:
+      workbook: "myntra_tracker"
+      sheet_name: "Intimist>Myntra (Intimist Corp)"
+      article_id_column: "Intimist"
+    attribute_source:
+      workbook: "belle_intimist"
+      sheet_name: "Myntra"
+      article_id_column: "vendorSkuCode"
+    output_folder: "data/output/intimist/"
+
+# ============================================================================
+# BRANDS - FLIPKART (keys: fk_komli, fk_invisisoft, fk_tweens, fk_dressberry, fk_joomie, fk_souminie, fk_invisifit, fk_intimist)
+# ============================================================================
+  fk_komli:
+    display_name: "Komli"
+    prefix: "KB"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Komli > Flipkart (AMC CORP)"
+      article_id_column: "Komli"
+    attribute_source:
+      workbook: "belle_komli"
+      sheet_name: "Komli::Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/komli/"
+
+  fk_invisisoft:
+    display_name: "Invisisoft"
+    prefix: "IS"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Invisi-Soft > Flipkart (Invisi-Soft Corp)"
+      article_id_column: "Invisi-Soft"
+    attribute_source:
+      workbook: "belle_invisisoft"
+      sheet_name: "Invisi-Soft::Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/invisisoft/"
+
+  fk_tweens:
+    display_name: "Tweens"
+    prefix: "TW"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Tweens > Flipkart (Belle Lingeries)"
+      article_id_column: "Tweens"
+    attribute_source:
+      workbook: "belle_tweens"
+      sheet_name: "Tweens:: Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/tweens/"
+
+  fk_dressberry:
+    display_name: "Dressberry"
+    prefix: "DB"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Dressberry > Flipkart (Belle Lingeries)"
+      article_id_column: "Dressberry"
+    attribute_source:
+      workbook: "belle_dressberry"
+      sheet_name: "DB:: Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/dressberry/"
+
+  fk_joomie:
+    display_name: "Joomie"
+    prefix: "J"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Joomie > Flipkart (Joomie Corp)"
+      article_id_column: "Joomie"
+    attribute_source:
+      workbook: "belle_joomie"
+      sheet_name: "Joomie::Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/joomie/"
+
+  fk_souminie:
+    display_name: "Souminie"
+    prefix: "S"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Souminie > Flipkart (Souminie Corp)"
+      article_id_column: "Souminie"
+    attribute_source:
+      workbook: "belle_souminie"
+      sheet_name: "Souminie::Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/souminie/"
+
+  fk_invisifit:
+    display_name: "Invisi-Fit"
+    prefix: "IF"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Invisi-Fit > Flipkart (Joomie Corp)"
+      article_id_column: "Invisi-fit"
+    attribute_source:
+      workbook: "belle_invisi_fit"
+      sheet_name: "Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/invisifit/"
+
+  fk_intimist:
+    display_name: "Intimist"
+    prefix: "IT"
+    sku_source:
+      workbook: "flipkart_tracker"
+      sheet_name: "Intimist > Flipkart (Intimist Corp)"
+      article_id_column: "Intimist"
+    attribute_source:
+      workbook: "belle_intimist"
+      sheet_name: "Flipkart"
+      article_id_column: "Seller SKU ID"
+    output_folder: "data/output/flipkart/intimist/"
+
+# ============================================================================
+# COLUMN MAPPINGS
+# ============================================================================
+column_mappings:
+  sku_columns:
+    - "Colors"
+    - "MRP"
+    - "SP"
+    - "A"
+    - "B"
+    - "C"
+    - "D"
+    - "E"
+    - "F"
+    - "Model - 1"
+    - "Model - 2"
+    - "Model - 3"
+
+  attribute_columns:
+    - "styleId"
+    - "styleGroupId"
+    - "vendorSkuCode"
+    - "vendorArticleNumber"
+    - "vendorArticleName"
+    - "brand"
+    - "Manufacturer Name and Address with Pincode"
+    - "Packer Name and Address with Pincode"
+    - "Importer Name and Address with Pincode"
+    - "Country Of Origin"
+    - "Country Of Origin2"
+    - "Country Of Origin3"
+    - "Country Of Origin4"
+    - "Country Of Origin5"
+    - "articleType"
+    - "Brand Size"
+    - "Standard Size"
+    - "is Standard Size present on Label"
+    - "Brand Colour (Remarks)"
+    - "GTIN"
+    - "HSN"
+    - "SKUCode"
+    - "AgeGroup"
+    - "Prominent Colour"
+    - "Second Prominent Colour"
+    - "Third Prominent Colour"
+    - "FashionType"
+    - "Usage"
+    - "Year"
+    - "season"
+    - "AI Label"
+    - "List View Name"
+    - "Product Details"
+    - "styleNote"
+    - "materialCareDescription"
+    - "sizeAndFitDescription"
+    - "productDisplayName"
+    - "tags"
+    - "addedDate"
+    - "Color Variant GroupId"
+    - "Type"
+    - "Multipack Set"
+    - "Fabric"
+    - "Fabric 2"
+    - "Straps"
+    - "Wiring"
+    - "Padding"
+    - "Features"
+    - "Fabric 3"
+    - "Coverage"
+    - "Pattern"
+    - "Closure"
+    - "Seam"
+    - "Wash Care"
+    - "Back"
+    - "Print or Pattern Type"
+    - "Sports Bra Support"
+    - "Technology"
+    - "Sport"
+    - "Knit or Woven"
+    - "Center Front Open"
+    - "Sustainable"
+    - "Style"
+    - "Character"
+    - "Number of Items"
+    - "Net Quantity Unit"
+    - "Personalization"
+    - "Collection Name"
+    - "Package Contains"
+    - "Net Quantity"
+    - "Overbust Range ( Inches )"
+    - "Underbust Range ( Inches )"
+    - "Front Image"
+    - "Side Image"
+    - "Back Image"
+    - "Detail Angle"
+    - "Look Shot Image"
+    - "Additional Image 1"
+    - "Additional Image 2"
+
+# ============================================================================
+# JOIN AND MERGE LOGIC
+# ============================================================================
+join_logic:
+  article_id_format: "{prefix}-{number}"
+  matcher_format: "{number}"
+  missing_attributes_handling: "skip"
+  alert_on_missing: true
+
+# ============================================================================
+# OUTPUT CONFIGURATION
+# ============================================================================
+output:
+  use_brand_folders: true
+  create_if_missing: true
+
+# ============================================================================
+# GLOBAL SETTINGS
+# ============================================================================
+caching:
+  enabled: false
+  ttl_minutes: 10
+
+rate_limiting:
+  max_requests_per_minute: 60
+  batch_read: true
+  retry_on_error: true
+  max_retries: 3
+
+logging:
+  level: "INFO"
+  log_file: "logs/multi_workbook.log"
+  verbose: true

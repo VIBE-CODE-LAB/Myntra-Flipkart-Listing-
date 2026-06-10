@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Secrets and local identity
+.env
+.env.*
+!.env.example
+config/google_credentials.json
+config/.master_token
+config/.device_info
+config/device_config.local.yaml
+
+# Runtime data
+data/output/
+data/db/
+data/processed/
+data/input/INVISI-SOFT-LISTINGS.xlsx
+*.db
+*.log
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+

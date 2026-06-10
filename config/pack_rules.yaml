@@ -1,0 +1,11 @@
+1PC:
+  height: 2
+  weight: 0.1
+
+2PC:
+  height: 4
+  weight: 0.2
+
+MULTI:
+  height: 4
+  weight: 0.2

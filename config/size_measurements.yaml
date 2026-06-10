@@ -1,0 +1,355 @@
+# Bra Size to Underbust/Overbust Measurements Mapping
+# Used to populate "Overbust Range (Inches)" and "Underbust Range (Inches)" columns
+# Format: Size -> {underbust: inches, overbust: inches}
+
+# Band sizes: 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50
+# Cup sizes: A, B, C, D, DD, E, F, G, H
+
+size_measurements:
+  # 28 Band
+  "28A":
+    underbust: 23
+    overbust: 28
+  "28B":
+    underbust: 23
+    overbust: 29
+  "28C":
+    underbust: 23
+    overbust: 30
+  "28D":
+    underbust: 23
+    overbust: 31
+  "28DD":
+    underbust: 23
+    overbust: 32
+  "28E":
+    underbust: 23
+    overbust: 32
+  "28F":
+    underbust: 23
+    overbust: 34
+  "28G":
+    underbust: 23
+    overbust: 37
+  "28H":
+    underbust: 23
+    overbust: 38
+
+  # 30 Band
+  "30A":
+    underbust: 25
+    overbust: 30
+  "30B":
+    underbust: 25
+    overbust: 31
+  "30C":
+    underbust: 25
+    overbust: 32
+  "30D":
+    underbust: 25
+    overbust: 33
+  "30DD":
+    underbust: 25
+    overbust: 34
+  "30E":
+    underbust: 25
+    overbust: 35
+  "30F":
+    underbust: 25
+    overbust: 36
+  "30G":
+    underbust: 25
+    overbust: 40
+  "30H":
+    underbust: 25
+    overbust: 41
+
+  # 32 Band
+  "32A":
+    underbust: 27
+    overbust: 32
+  "32B":
+    underbust: 27
+    overbust: 33
+  "32C":
+    underbust: 27
+    overbust: 34
+  "32D":
+    underbust: 27
+    overbust: 35
+  "32DD":
+    underbust: 27
+    overbust: 36
+  "32E":
+    underbust: 27
+    overbust: 37
+  "32F":
+    underbust: 27
+    overbust: 39
+  "32G":
+    underbust: 27
+    overbust: 42
+  "32H":
+    underbust: 27
+    overbust: 43
+
+  # 34 Band
+  "34A":
+    underbust: 29
+    overbust: 34
+  "34B":
+    underbust: 29
+    overbust: 35
+  "34C":
+    underbust: 29
+    overbust: 36
+  "34D":
+    underbust: 29
+    overbust: 37
+  "34DD":
+    underbust: 29
+    overbust: 38
+  "34E":
+    underbust: 29
+    overbust: 40
+  "34F":
+    underbust: 29
+    overbust: 42
+  "34G":
+    underbust: 29
+    overbust: 45
+  "34H":
+    underbust: 29
+    overbust: 46
+
+  # 36 Band
+  "36A":
+    underbust: 31
+    overbust: 36
+  "36B":
+    underbust: 31
+    overbust: 37
+  "36C":
+    underbust: 31
+    overbust: 38
+  "36D":
+    underbust: 31
+    overbust: 39
+  "36DD":
+    underbust: 31
+    overbust: 40
+  "36E":
+    underbust: 31
+    overbust: 42
+  "36F":
+    underbust: 31
+    overbust: 44
+  "36G":
+    underbust: 31
+    overbust: 47
+  "36H":
+    underbust: 31
+    overbust: 48
+
+  # 38 Band
+  "38A":
+    underbust: 33
+    overbust: 38
+  "38B":
+    underbust: 33
+    overbust: 39
+  "38C":
+    underbust: 33
+    overbust: 40
+  "38D":
+    underbust: 33
+    overbust: 41
+  "38DD":
+    underbust: 33
+    overbust: 42
+  "38E":
+    underbust: 33
+    overbust: 44
+  "38F":
+    underbust: 33
+    overbust: 46
+  "38G":
+    underbust: 33
+    overbust: 49
+  "38H":
+    underbust: 33
+    overbust: 50
+
+  # 40 Band
+  "40A":
+    underbust: 35
+    overbust: 40
+  "40B":
+    underbust: 35
+    overbust: 41
+  "40C":
+    underbust: 35
+    overbust: 42
+  "40D":
+    underbust: 35
+    overbust: 43
+  "40DD":
+    underbust: 35
+    overbust: 44
+  "40E":
+    underbust: 35
+    overbust: 46
+  "40F":
+    underbust: 35
+    overbust: 48
+  "40G":
+    underbust: 35
+    overbust: 51
+  "40H":
+    underbust: 35
+    overbust: 52
+
+  # 42 Band
+  "42A":
+    underbust: 37
+    overbust: 42
+  "42B":
+    underbust: 37
+    overbust: 43
+  "42C":
+    underbust: 37
+    overbust: 44
+  "42D":
+    underbust: 37
+    overbust: 45
+  "42DD":
+    underbust: 37
+    overbust: 46
+  "42E":
+    underbust: 37
+    overbust: 48
+  "42F":
+    underbust: 37
+    overbust: 50
+  "42G":
+    underbust: 37
+    overbust: 53
+  "42H":
+    underbust: 37
+    overbust: 54
+
+  # 44 Band
+  "44A":
+    underbust: 39
+    overbust: 44
+  "44B":
+    underbust: 39
+    overbust: 45
+  "44C":
+    underbust: 39
+    overbust: 46
+  "44D":
+    underbust: 39
+    overbust: 47
+  "44DD":
+    underbust: 39
+    overbust: 48
+  "44E":
+    underbust: 39
+    overbust: 50
+  "44F":
+    underbust: 39
+    overbust: 52
+  "44G":
+    underbust: 39
+    overbust: 55
+  "44H":
+    underbust: 39
+    overbust: 56
+
+  # 46 Band
+  "46A":
+    underbust: 41
+    overbust: 46
+  "46B":
+    underbust: 41
+    overbust: 47
+  "46C":
+    underbust: 41
+    overbust: 48
+  "46D":
+    underbust: 41
+    overbust: 49
+  "46DD":
+    underbust: 41
+    overbust: 50
+  "46E":
+    underbust: 41
+    overbust: 52
+  "46F":
+    underbust: 41
+    overbust: 54
+  "46G":
+    underbust: 41
+    overbust: 57
+  "46H":
+    underbust: 41
+    overbust: 58
+
+  # 48 Band
+  "48A":
+    underbust: 43
+    overbust: 48
+  "48B":
+    underbust: 43
+    overbust: 49
+  "48C":
+    underbust: 43
+    overbust: 50
+  "48D":
+    underbust: 43
+    overbust: 51
+  "48DD":
+    underbust: 43
+    overbust: 52
+  "48E":
+    underbust: 43
+    overbust: 54
+  "48F":
+    underbust: 43
+    overbust: 56
+  "48G":
+    underbust: 43
+    overbust: 59
+  "48H":
+    underbust: 43
+    overbust: 60
+
+  # 50 Band
+  "50A":
+    underbust: 45
+    overbust: 50
+  "50B":
+    underbust: 45
+    overbust: 51
+  "50C":
+    underbust: 45
+    overbust: 52
+  "50D":
+    underbust: 45
+    overbust: 53
+  "50DD":
+    underbust: 45
+    overbust: 54
+  "50E":
+    underbust: 45
+    overbust: 56
+  "50F":
+    underbust: 45
+    overbust: 58
+  "50G":
+    underbust: 45
+    overbust: 61
+  "50H":
+    underbust: 45
+    overbust: 62

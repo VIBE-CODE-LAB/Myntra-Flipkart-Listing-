@@ -1,0 +1,13 @@
+forbidden_columns:
+  - Group id
+  - Luxury cess
+  - Other image url 4
+  - Main palette image url
+  - Secondary color
+  - EAN / UPC
+  - Design
+  - Inner lining
+  - Video url
+  - Warranty summary
+  - Ornamentation Type
+  - Trend

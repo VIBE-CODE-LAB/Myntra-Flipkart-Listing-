@@ -1,0 +1,4 @@
+-r backend/requirements.txt
+-r frontend/requirements_streamlit.txt
+pytest>=9.0.3,<10
+httpx>=0.28,<1

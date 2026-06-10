@@ -1,0 +1,36 @@
+# Device Configuration
+# This file stores the device and server connection details
+# Auto-generated on first run
+
+# Server Configuration
+server:
+  host: "127.0.0.1"
+  port: 5001
+  timeout: 30
+
+# Device Configuration (set on first registration)
+device:
+  device_id: null  # Will be set on first registration
+  api_token: null  # Will be set on first registration
+  device_name: "Main System"
+  is_master: true
+
+# Connection Configuration
+connection:
+  server_url: "http://localhost:5001"
+  heartbeat_interval: 30  # seconds
+  timeout_threshold: 300  # 5 minutes in seconds
+  auto_reconnect: true
+  max_retries: 3
+  retry_delay: 5  # seconds
+
+# Security Configuration
+security:
+  verify_ssl: true
+  token_refresh_interval: 86400  # 24 hours in seconds
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_dir: "./data/logs"
+  enable_file_logging: true

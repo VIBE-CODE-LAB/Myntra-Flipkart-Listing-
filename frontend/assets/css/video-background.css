@@ -1,0 +1,97 @@
+/* Video Background Styling */
+
+/* Main video background container */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Video element styling */
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Content overlay to ensure readability */
+.streamlit-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Smooth transitions for video changes */
+.video-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.25;
+    }
+}
+
+/* Settings panel styling */
+.video-settings-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-settings-panel h3 {
+    margin-top: 0;
+    color: #1f77b4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Sound control styling */
+.sound-control {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.sound-icon {
+    font-size: 20px;
+}
+
+/* Volume slider */
+.volume-slider {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #video-background {
+        display: none;
+    }
+    
+    .streamlit-container {
+        background: rgba(255, 255, 255, 0.98);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .video-settings-panel {
+        background: rgba(25, 25, 25, 0.95);
+    }
+    
+    .video-settings-panel h3 {
+        color: #0dadea;
+    }
+}

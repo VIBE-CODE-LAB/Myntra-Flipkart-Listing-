@@ -1,0 +1,26 @@
+fixed_values:
+  hsn_code: "62121000"
+  tax_code: "GST_Apprael"
+  fulfilment_by: "Seller"
+  country_of_origin: "India"
+  stock_count: 1
+  procurement_type: "express"
+  procurement_sla: 2
+  shipping_provider: "Flipkart"
+  listing_status: "Active"
+  pattern: "Solid"
+  size_measuring_unit: "Regular"
+
+  # Permanent handling fee settings (always zero)
+  local_handling_fee: 0
+  zonal_handling_fee: 0
+  national_handling_fee: 0
+  # Company details (permanent)
+  manufacturer_details: "Belle Lingerie Private Limited"
+  packer_details: "Belle Lingerie Private Limited"
+  importer_details: "Belle Lingerie Private Limited"
+
+  manufacturer_name: "Belle Lingerie Private Limited"
+  # Minimum Order Quantity (constant)
+  minimum_order_quantity: 1
+

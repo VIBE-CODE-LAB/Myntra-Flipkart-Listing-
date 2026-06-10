@@ -1,0 +1,13 @@
+sku_format:
+  separator: "-"
+  model_separator: "_"
+
+  order:
+    - brand_short_id
+    - article
+    - color_short_id
+    - pack
+    - size_cup
+    - model_code
+
+  example: IS-1013-BLK-1PC-32A_MD0126

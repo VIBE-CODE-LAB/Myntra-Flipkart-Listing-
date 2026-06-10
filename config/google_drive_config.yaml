@@ -1,0 +1,33 @@
+# Google Drive / Google Sheets Configuration
+# Use this to connect INVISI-SOFT-LISTINGS from Google Sheets
+
+# Enable Google Sheets mode (true) or use local Excel files (false)
+enabled: false
+
+# Your Google Sheets Spreadsheet ID
+# Get this from your Google Sheets URL:
+# https://docs.google.com/spreadsheets/d/[THIS_IS_YOUR_SPREADSHEET_ID]/edit
+spreadsheet_id: ""
+
+# Alternative: Use spreadsheet URL (will extract ID automatically)
+spreadsheet_url: ""
+
+# Auto-refresh settings
+auto_refresh:
+  enabled: false           # Automatically refresh data periodically
+  interval_minutes: 5      # Check for updates every X minutes
+  
+# Caching
+cache:
+  enabled: false          # DISABLED - force_refresh=True in generator always fetches fresh data
+  cache_duration_minutes: 0   # Set to 0 to ensure fresh data every run
+
+# Fallback to local file if Google Sheets unavailable
+fallback_to_local: true
+local_file_path: "data/input/INVISI-SOFT-LISTINGS.xlsx"
+
+# Credentials file path
+credentials_file: "config/google_credentials.json"
+
+# Logging
+verbose: true            # Show detailed logs for Google Sheets operations
