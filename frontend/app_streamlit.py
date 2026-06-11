@@ -44,6 +44,9 @@ CONFIG_PATH = str(CONFIG_DIR / "multi_workbook_config.yaml")
 # Ensure working directory is project root so engine imports resolve correctly
 os.chdir(str(PROJECT_ROOT))
 
+# Ensure output directory exists to avoid raw folder-not-found warnings
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # ── Article autocomplete helpers ────────────────────────────────────────────
 
@@ -560,12 +563,16 @@ with tab2:
     else:
         st.success(f"✅ Backend server is connected")
 
-        master_token_file = CONFIG_DIR / ".master_token"
-        if not master_token_file.exists():
-            st.error("⚠️ Master token not found!")
-        else:
-            master_token = master_token_file.read_text().strip()
+        # Load master token from environment/secrets first, then fall back to local file
+        master_token = os.getenv("MASTER_TOKEN", "").strip()
+        if not master_token:
+            master_token_file = CONFIG_DIR / ".master_token"
+            if master_token_file.exists():
+                master_token = master_token_file.read_text().strip()
 
+        if not master_token:
+            st.error("⚠️ Master token not found! Set the MASTER_TOKEN environment variable/secret.")
+        else:
             col_refresh, col_terminate_all, col_spacer = st.columns([1, 2, 2])
 
             with col_refresh:
